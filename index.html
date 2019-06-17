@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src='tictactoe.js'></script>
+    <title>abc</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="tictactoe.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323" rel="stylesheet">
+</head>
+
+<body onload="showDialog()">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323" rel="stylesheet">
+    <h1 id="title">Tic Tac Toe</h1>
+    <div id="white-background">
+    </div>
+    <div id="dlgbox" class="vertical-center">
+        <div id="dlg-body" class="vertical-center">
+            <h3 class="menu-text">Choose Player 1's Symbol</h3>
+            <button class="square2" id="chooseX" onclick="chooseSym('X')">X</button>
+            <button class="square2" id="chooseO" onclick="chooseSym('O')">O</button>
+            <h3 class="menu-text">Choose Game Mode</h3>
+            <button class="square2" id="choose-1player" onclick="click1p()">1 Player</button>
+            <button class="square2" id="choose-2player" onclick="click2p()">2 Players</button>
+        </div>
+    </div>
+    <div class="grid">
+        <button class="square" id="s0" onclick="playerTurn('s0')"></button>
+        <button class="square" id="s1" onclick="playerTurn('s1')"> </button>
+        <button class="square" id="s2" onclick="playerTurn('s2')"> </button>
+
+        <button class="square" id="s3" onclick="playerTurn('s3')"></button>
+        <button class="square" id="s4" onclick="playerTurn('s4')"></button>
+        <button class="square" id="s5" onclick="playerTurn('s5')"></button>
+
+        <button class="square" id="s6" onclick="playerTurn('s6')"></button>
+        <button class="square" id="s7" onclick="playerTurn('s7')"></button>
+        <button class="square" id="s8" onclick="playerTurn('s8')"></button>
+        <button class="menu-button" onclick="showDialog()">Settings</button>
+        <button class="menu-button" onclick="start()">Restart</button>
+        <button class="square" id="showTurn"></button>
+    </div>
+
+    <div>
+
+    </div>
+</body>
+
+</html>
