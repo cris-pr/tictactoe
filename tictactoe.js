@@ -32,7 +32,7 @@ var clickSpace = function(space) {
         }
     }
 }
-
+//clears the game board and restarts the game.
 function reset() {
     xsAndOs = [];
     turnNo = 0;
@@ -103,6 +103,7 @@ function checkVictory() {
         }
     }
 }
+//Function activated to determine the computer's moves when the computer is playing as O
 var computerClickO = function(){
     if (turnNo == 1 && turn == computer) {
         firstMoveO();
@@ -137,6 +138,7 @@ var computerClickO = function(){
         return;
     }
 }
+//Function activated to determine the computer's moves when the computer is playing as X
 
 var computerClickX = function() {
     checkVictory();
@@ -165,6 +167,7 @@ var computerClickX = function() {
       checkVictory();
     }
 }
+//Checks if there are 2 of the oponent's symbol in a row to stop the opponent from winning the game.
 function checkFor2() {
     console.log("in check for 2");
     for (var i = 0; i < 3; i++) {
@@ -227,6 +230,7 @@ function checkFor2() {
         }
     }
 }
+//checks if the computer can win the game in the next move
 function checkForWin() {
     console.log("in checkforwin");
     for (var j = 0; j < 2; j++) {
@@ -297,7 +301,7 @@ function checkForWin() {
     }
 }
 
-
+//this function does the computer's first move when the computer plays X. It places the X in one of the board's corners at random.
 function firstMoveX() {
     var randNo
     //if computer is "X" it will choose a corner in the first turn
@@ -309,7 +313,7 @@ function firstMoveX() {
         }
     }
 }
-
+//this function does the computer's second move as X
 function secondMoveX() {
     if (xsAndOs[4] == player) {
         if (xsAndOs[0] == computer) {
@@ -357,6 +361,7 @@ function secondMoveX() {
     }
 }
 
+//this function does the computer's third move as X
 function thirdMoveX() {
     if (turnNo == 4) {
         if (xsAndOs[0] == computer && xsAndOs[4] == computer) {
@@ -411,7 +416,7 @@ function ninthMoveX() {
         }
     }
 }
-
+//first move for computer playing O
 function firstMoveO() {
     //if the computer is "O" it will choose the center if the player chose a corner
     if (xsAndOs[0] == "X" || xsAndOs[2] == "X" || xsAndOs[6] == "X" || xsAndOs[8] == "X") {
@@ -431,6 +436,7 @@ function firstMoveO() {
         }
     }
 }
+//fourth move for computer playing O
 function fourthMoveO() {
     console.log("inFourth move");
     for(var i = 0; i<9;i++){
@@ -457,7 +463,7 @@ function start() {
         computerClickX();
     }
 }
-
+//shows the settings dialog
 function showDialog() {
     var whitebg = document.getElementById("white-background");
     var dlg = document.getElementById("dlgbox");
@@ -476,7 +482,7 @@ function showDialog() {
     document.getElementById("chooseX").style.backgroundColor = "deepskyblue";
     document.getElementById("chooseO").style.backgroundColor = "deepskyblue";
 }
-
+//function for 1 player game setup 
 function click1p() {
     var square = document.getElementById("choose-1player");
     var square2 = document.getElementById("choose-2player");
@@ -491,7 +497,7 @@ function click1p() {
     }
 
 }
-
+//function for 2 player game setup
 function click2p() {
     var square = document.getElementById("choose-2player");
     var square2 = document.getElementById("choose-1player");
@@ -506,6 +512,7 @@ function click2p() {
     }
 
 }
+//function for the choice of player 1's symbol
 var chooseSym = function(sym) {
     var square = document.getElementById("choose" + sym);
     var square2;
